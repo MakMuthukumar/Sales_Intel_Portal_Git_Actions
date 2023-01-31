@@ -6,7 +6,7 @@ import org.testng.annotations.AfterSuite;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(features = "D:\\SalesIntel_Portal_Automation-master\\SalesIntel_Portal_Automation\\src\\test\\resources\\Features\\New_UI_View", glue = {
+@CucumberOptions(features = "src\\test\\resources\\Features\\New_UI_View", glue = {
 		"org.stepdefinition", "org.runner" }, dryRun = false, monochrome = true, tags = { "@Test" }, plugin = {
 				"io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "pretty",
