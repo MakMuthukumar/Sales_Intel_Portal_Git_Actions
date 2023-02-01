@@ -26,16 +26,28 @@ jobs:
         run: |
           mvn clean install test
           
-      - name: Execution Results Upload Artifact
+      - name: Execution Results Upload Artifact For Cucumber Reporting
         uses: actions/upload-artifact@v3
         with: 
-              name: Latest Results
-              path: test-output/spark/
+              name: Cucumber Report Latest Results
+              path: src/test/resources/Reports/CucumberReports/cucumber-html-reports/
               
-      - name: Execution Results Download Artifact      
+      - name: Execution Results Download Artifact  For Cucumber Reporting     
         uses: actions/download-artifact@v3
         with:
-          name: Latest Results
+          name: Cucumber Report Latest Results          
+          
+      - name: Execution Results Upload Artifact For Extent Report
+        uses: actions/upload-artifact@v3
+        with: 
+              name: Extent Report Latest Results
+              path: test-output/spark/              
+              
+      - name: Execution Results Download Artifact For Extent Report      
+        uses: actions/download-artifact@v3
+        with:
+          name: Extent Report Latest Results
           
       - name: Execution Results Download Artifact File List
         run: ls -R
+        
