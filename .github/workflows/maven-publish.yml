@@ -23,4 +23,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Test with Maven
-        run: mvn clean install test
+        run: |
+          mvn clean install test
+          mkdir Execution_Results && cp src/test/resources/Reports/CucumberReports Execution_Results
+          
+      - name: Execution Results
+        uses: actions/upload-artifact@v3
+        with: 
+              name: Latest Results
+              path: Execution_Results
