@@ -23,4 +23,19 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Test with Maven
-        run: mvn clean install test
+        run: |
+          mvn clean install test
+          
+      - name: Execution Results Upload Artifact
+        uses: actions/upload-artifact@v3
+        with: 
+              name: Latest Results
+              path: test-output/spark/
+              
+      - name: Execution Results Download Artifact      
+        uses: actions/download-artifact@v3
+        with:
+          name: Latest Results
+          
+      - name: Execution Results Download Artifact File List
+        run: ls -R
