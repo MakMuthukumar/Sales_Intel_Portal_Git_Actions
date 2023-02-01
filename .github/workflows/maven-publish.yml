@@ -40,8 +40,8 @@ jobs:
       - name: Execution Results Download Artifact File List
         run: ls -R
         
-      - name: Test marketplace action
-        uses: simple-elf/allure-report-action@master
+      - name: Test local action
+        uses: ./allure-report-action
         if: always()
         id: allure-report
         with:
