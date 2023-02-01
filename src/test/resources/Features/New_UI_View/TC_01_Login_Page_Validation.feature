@@ -4,7 +4,7 @@ Feature: Validate application login Page
   Scenario: To validate SalesIntel application Launching application
   Given Launch the url
 
-  @Test
+  @Test1
   Scenario: To validate SalesIntel application Login Screen Content
   Then Validate Login Page Title is displayed
   And Validate Email Field is displayed
@@ -14,20 +14,20 @@ Feature: Validate application login Page
   And Validate FAQ Link is displayed
   And Validate Login Button is displayed
 
-  @Test
+  @Test1
   Scenario: To validate SalesIntel application Tapping only Login Button
   When Click On Login Button
   Then Validate Error Text when Tried with Invalid Username and Invalid Password
   And Validate Error Text when Tried with Invalid Password and Invalid Username
 
-  @Test
+  @Test1
   Scenario: To validate SalesIntel application Login with Invalid Username and Valid Password
   When Enter Invalid Username
   And Enter Valid Password
   And Click On Login Button
   Then Validate Error Text when Tried with Invalid Username and Valid Password
 
-  @Test
+  @Test1
   Scenario: To validate SalesIntel application Login with Valid Username and Invalid Password
   When Clear the Text in Username Field
   And Clear the Text in Password Field
@@ -35,7 +35,7 @@ Feature: Validate application login Page
   And Enter Invalid Password
   And Click On Login Button
 
-  @Test
+  @Test1
   Scenario: To validate SalesIntel application Login with Invalid Username and Invalid Password
   When Clear the Text in Username Field
   And Clear the Text in Password Field
@@ -44,7 +44,7 @@ Feature: Validate application login Page
   And Click On Login Button
   Then Validate Error Text when Tried with Invalid Username and Valid Password
 
-  @Test
+  @Test1
   Scenario: To validate SalesIntel application Forget Password
   When Click on Forget Password
   Then Verify Forget Email Address Field is displayed
@@ -52,11 +52,11 @@ Feature: Validate application login Page
   Then Verify Reset Password Button is displayed
   When Click On Reset Password Button
 
-  @Test
+  @Test1
   Scenario: To validate SalesIntel application Remember Me
   When Click on Remember Me
 
-  @Test
+  @Test1
   Scenario: To validate SalesIntel application Valid User Username and Valid Password
   When Click on Remember Me
   And Clear the Text in Username Field
@@ -65,7 +65,7 @@ Feature: Validate application login Page
   And Enter Valid Password
   And Click On Login Button
 
-  @Test
+  @Test1
   Scenario: To validate application Logout
     When Click On Setting Options
     And Click On Logout Options
