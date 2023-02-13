@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
@@ -51,6 +51,13 @@ jobs:
       - name: Execution Results Download Artifact File List
         run: ls -R
         
+      - name: Install zip
+        uses: montudor/action-zip@v1
+        
+      - name: Zip output
+        run: zip -qq -r Extent_Report.zip dist node_modules package.json
+        working-directory: test-output/spark/
+        
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
         with:
@@ -63,12 +70,7 @@ jobs:
           subject: Github Actions Automation Result
           to: pssraja94@gmail.com
           from: pssraja94@gmail.com
-          html_body: |
-            Hi Team,
-            Build job of ${{github.repository}} completed successfully!
-            Please find the Attachment
-            Thanks
-            Muthukumar
+          html_body: Build job of ${{github.repository}} completed successfully!
           ignore_cert: true
           convert_markdown: true
           attachments: attachments.zip,git.diff,./dist/static/*.js
