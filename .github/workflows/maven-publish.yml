@@ -51,5 +51,22 @@ jobs:
       - name: Execution Results Download Artifact File List
         run: ls -R
         
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          connection_url: ${{secrets.MAIL_CONNECTION}}
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: Github Actions Automation Result
+          to: pssraja007@gmail.com,pssraja001@gmail.com
+          from: pssraja94@gmail.com
+          ignore_cert: true
+          convert_markdown: true
+          attachments: attachments.zip,git.diff,./dist/static/*.js
+          priority: low
+        
 
         
