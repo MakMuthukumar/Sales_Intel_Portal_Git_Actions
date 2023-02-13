@@ -66,16 +66,6 @@ jobs:
           html_body: Build job of ${{github.repository}} completed successfully!
           ignore_cert: true
           convert_markdown: true
-      - subject: Plain body (Markdown)
-          convert_markdown: true
-          body: file://README.md
-      - subject: HTML body (Markdown)
-          convert_markdown: true
-          html_body: file://README.md
-      - subject: Multipart body (Markdown)
-          convert_markdown: true
-          body: file://README.md
-          html_body: file://README.md
           attachments: attachments.zip,git.diff,./dist/static/*.js
           priority: high
         
