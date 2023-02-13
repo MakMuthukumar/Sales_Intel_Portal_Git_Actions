@@ -38,13 +38,13 @@ jobs:
           name: Cucumber Report Latest Results
           
       - name: Tar files
-        run: tar -cvf Cucumber_Report.tar src/test/resources/Reports/CucumberReports/cucumber-html-reports/
+        run: tar -cvf Cucumber_Report.tar D:/a/Sales_Intel_Portal_Git_Actions/Sales_Intel_Portal_Git_Actions/src/test/resources/Reports/CucumberReports/
               
       - name: Execution Results Cucumber Reporting tar File
         uses: actions/upload-artifact@v3
         with: 
               name: Cucumber Report Latest Results
-              path: src/test/resources/Reports/CucumberReports/cucumber-html-reports/Cucumber_Report.tar
+              path: D:/a/Sales_Intel_Portal_Git_Actions/Sales_Intel_Portal_Git_Actions/src/test/resources/Reports/CucumberReports/cucumber-html-reports/Cucumber_Report.tar
           
       - name: Execution Results Upload Artifact For Extent Report
         uses: actions/upload-artifact@v3
