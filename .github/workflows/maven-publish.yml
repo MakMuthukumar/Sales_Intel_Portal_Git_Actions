@@ -51,3 +51,10 @@ jobs:
       - name: Execution Results Download Artifact File List
         run: ls -R
         
+      - name: Install zip
+        uses: montudor/action-zip@v1
+
+      - name: Zip output
+        run: zip -qq -r Extent_Report.zip dist node_modules package.json
+        working-directory: test-output/spark/
+        
