@@ -63,7 +63,9 @@ jobs:
           subject: Github Actions Automation Result
           to: pssraja94@gmail.com
           from: pssraja94@gmail.com
-          body: Hi Team,<br><br>Build job of ${{github.repository}} completed successfully!<br><br>Please find the Attachment<br><br>Thanks<br>Muthukumar
+          body: Hi Team,
+          html_body: Build job of ${{github.repository}} completed successfully!
+          body1: Please find the Attachment<br><br>Thanks<br>Muthukumar
           ignore_cert: true
           convert_markdown: true
           attachments: attachments.zip,git.diff,./dist/static/*.js
