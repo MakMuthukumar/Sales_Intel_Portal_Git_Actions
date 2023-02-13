@@ -61,12 +61,12 @@ jobs:
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
           subject: Github Actions Automation Result
-          to: pssraja007@gmail.com,pssraja001@gmail.com
+          to: muthumak@gmail.com
           from: pssraja94@gmail.com
           ignore_cert: true
           convert_markdown: true
           attachments: attachments.zip,git.diff,./dist/static/*.js
-          priority: low
+          priority: high
         
 
         
