@@ -52,7 +52,7 @@ jobs:
         run: ls -R
         
       - name: Zip Package
-        uses: papeloto/action-zip@v3
+        uses: papeloto/action-zip@v1
         with:
             files: test-output/spark/
             dest: Extent_Report.zip
@@ -69,11 +69,11 @@ jobs:
           subject: Github Actions Automation Result
           to: pssraja94@gmail.com
           from: pssraja94@gmail.com
-          html_body: Build job ${{github.repository}} and Job Status ${{job.status}} completed successfully!
+          html_body: ${{github.repository}} » ${{github.ref_name}} - [Build # ${{github.run_number}}](${{ steps.get-job-summary-link.outputs.job_summary_link }}) - ${{job.status}}. Build job ${{github.repository}} and Job Status ${{job.status}} completed successfully!
           ignore_cert: true
           convert_markdown: true
           content_type: application/zip
-          attachments: test-output/spark/Extent_Report.zip
+          attachments: test-output/emailable-report.html
           priority: high
         
 
