@@ -52,7 +52,7 @@ jobs:
         run: ls -R
         
       - name: Zip Package
-        uses: papeloto/action-zip@v1
+        uses: papeloto/action-zip@v3
         with:
             files: test-output/spark/
             dest: Extent_Report.zip
