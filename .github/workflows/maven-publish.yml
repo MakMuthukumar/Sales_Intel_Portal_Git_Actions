@@ -51,6 +51,12 @@ jobs:
       - name: Execution Results Download Artifact File List
         run: ls -R
         
+      - name: Zip Package
+        uses: papeloto/action-zip@v1
+        with:
+            files: test-output/spark/
+            dest: Extent_Report.zip
+        
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
         with:
@@ -63,10 +69,11 @@ jobs:
           subject: Github Actions Automation Result
           to: pssraja94@gmail.com
           from: pssraja94@gmail.com
-          html_body: Build job of ${{github.repository}} completed successfully!
+          html_body: Build job ${{github.repository}} and Job Status ${{job.status}} completed successfully!
           ignore_cert: true
           convert_markdown: true
-          attachments: attachments.zip,git.diff,./dist/static/*.js
+          content_type: application/zip
+          attachments: test-output/spark/Extent_Report.zip
           priority: high
         
 
