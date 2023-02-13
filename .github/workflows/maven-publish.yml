@@ -35,7 +35,16 @@ jobs:
       - name: Execution Results Download Artifact  For Cucumber Reporting     
         uses: actions/download-artifact@v3
         with:
-          name: Cucumber Report Latest Results          
+          name: Cucumber Report Latest Results
+          
+      - name: Tar files
+        run: tar -cvf Cucumber_Report.tar src/test/resources/Reports/CucumberReports/cucumber-html-reports/
+              
+      - name: Execution Results Cucumber Reporting tar File
+        uses: actions/upload-artifact@v3
+        with: 
+              name: Cucumber Report Latest Results
+              path: src/test/resources/Reports/CucumberReports/cucumber-html-reports/Cucumber_Report.tar
           
       - name: Execution Results Upload Artifact For Extent Report
         uses: actions/upload-artifact@v3
