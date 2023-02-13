@@ -69,11 +69,11 @@ jobs:
           subject: Github Actions Automation Result
           to: pssraja94@gmail.com
           from: pssraja94@gmail.com
-          html_body: ${{github.repository}} » ${{github.ref_name}} - [Build ${{github.run_number}}](${{ steps.get-job-summary-link.outputs.job_summary_link }}) - ${{job.status}}. Build job ${{github.repository}} and Job Status ${{job.status}} completed successfully!
+          body: Build Job No:${{github.run_number}} and Job Status:${{job.status}} is completed successfully!
           ignore_cert: true
           convert_markdown: true
           content_type: application/zip
-          attachments: test-output/emailable-report.html
+          attachments: test-output/spark/Extent_Report.zip
           priority: high
         
 
