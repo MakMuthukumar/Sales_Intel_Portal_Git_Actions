@@ -27,37 +27,44 @@ jobs:
           mvn clean install test
           
       - name: Execution Results Upload Artifact For Cucumber Reporting
+        if: always()
         uses: actions/upload-artifact@v3
         with: 
               name: Cucumber Report Latest Results
               path: src/test/resources/Reports/CucumberReports/cucumber-html-reports/
           
-      - name: Execution Results Download Artifact  For Cucumber Reporting     
+      - name: Execution Results Download Artifact  For Cucumber Reporting
+        if: always()
         uses: actions/download-artifact@v3
         with:
           name: Cucumber Report Latest Results
           
       - name: Execution Results Upload Artifact For Extent Report
+        if: always()
         uses: actions/upload-artifact@v3
         with: 
               name: Extent Report Latest Results
               path: test-output/spark/              
 
-      - name: Execution Results Download Artifact For Extent Report      
+      - name: Execution Results Download Artifact For Extent Report
+        if: always()
         uses: actions/download-artifact@v3
         with:
           name: Extent Report Latest Results
           
       - name: Execution Results Download Artifact File List
+        if: always()
         run: ls -R
         
       - name: Zip Package
+        if: always()
         uses: papeloto/action-zip@v1
         with:
             files: test-output/spark/
             dest: Extent_Report.zip
         
       - name: Send mail
+        if: always()
         uses: dawidd6/action-send-mail@v3
         with:
           connection_url: ${{secrets.MAIL_CONNECTION}}
