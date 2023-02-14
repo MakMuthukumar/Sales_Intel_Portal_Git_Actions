@@ -73,7 +73,7 @@ jobs:
           ignore_cert: true
           convert_markdown: true
           content_type: application/zip
-          attachments: test-output/emailable-report.html
+          attachments: test-output/Default suite/Default test.html,test-output/emailable-report.html
           priority: high
         
 
