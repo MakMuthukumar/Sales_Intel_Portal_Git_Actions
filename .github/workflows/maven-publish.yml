@@ -73,8 +73,8 @@ jobs:
           secure: true
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: Github Actions Automation Result
-          to: muthumak@gmail.com
+          subject: Sales Intel CI/CD Automation Result
+          to: muthumak@gmail.com,Muthu.kumar@astegic.com
           from: pssraja94@gmail.com
           body: Build Job No:${{github.run_number}} and Job Status:${{job.status}} and the Execution is completed successfully!
           ignore_cert: true
