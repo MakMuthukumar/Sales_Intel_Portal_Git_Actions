@@ -75,7 +75,7 @@ jobs:
           password: ${{secrets.MAIL_PASSWORD}}
           subject: Sales Intel CI/CD Automation Result
           to: muthumak@gmail.com,Muthu.kumar@astegic.com
-          from: pssraja94@gmail.com
+          from: muthumak@gmail.com
           body: Build Job No:${{github.run_number}} and Job Status:${{job.status}} and the Execution is completed successfully!
           ignore_cert: true
           convert_markdown: true
