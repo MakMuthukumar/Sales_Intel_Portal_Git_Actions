@@ -32,7 +32,6 @@ jobs:
               </body>
               </html>
             html_body: |
-              <!DOCTYPE html>
               <html>
               <body>
               <p>Hi Team</p><br><br>
