@@ -15,8 +15,7 @@ jobs:
       max-parallel: 1
       matrix:
         include:
-          - subject: |
-              <!DOCTYPE html>
+          - subject: | 
               <html>
               <body>
               <p>Sales Intel CI/CD Automation Result
@@ -32,7 +31,7 @@ jobs:
               </script>
               </body>
               </html>
-            body: |
+            html_body: |
               <!DOCTYPE html>
               <html>
               <body>
@@ -109,7 +108,7 @@ jobs:
           subject: ${{matrix.subject}}
           to: pssraja94@gmail.com
           from: pssraja94@gmail.com
-          body: ${{matrix.body}}
+          body: ${{matrix.html_body}}
           ignore_cert: true
           convert_markdown: true
           content_type: application/zip
