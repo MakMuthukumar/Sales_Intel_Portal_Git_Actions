@@ -11,37 +11,6 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    strategy:
-      max-parallel: 1
-      matrix:
-        include:
-          - subject: | 
-              <html>
-              <body>
-              <p>Sales Intel CI/CD Automation Result
-              <span id="date">
-              </span>
-              </p>
-              <script>
-              var n =  new Date();
-              y = n.getFullYear();
-              m = n.getMonth() + 1;
-              d = n.getDate();
-              document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
-              </script>
-              </body>
-              </html>
-            html_body: |
-              <html>
-              <body>
-              <p>Hi Team</p><br><br>
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;Build Job No:${{github.run_number}} and Job Status:${{job.status}} and the Execution is completed successfully!</p><br><br>
-              <a src="test-output/spark/Extent_Report.zip">Extent Report Zip Directory</a><br>
-              <a src="test-output/spark/">Extent Report Directory</a><br>
-              <p>Thanks</p><br>
-              <p>Muthukumar</p>
-              </body>
-              </html>
     permissions:
       contents: read
       packages: write
@@ -104,6 +73,36 @@ jobs:
           secure: true
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
+          matrix:
+              include:
+              - subject: | 
+                  <html>
+                  <body>
+                  <p>Sales Intel CI/CD Automation Result
+                  <span id="date">
+                  </span>
+                  </p>
+                  <script>
+                   var n =  new Date();
+                   y = n.getFullYear();
+                   m = n.getMonth() + 1;
+                   d = n.getDate();
+                   document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+                   </script>
+                  </body>
+                  </html>
+              html_body: |
+                  <html>
+                  <body>
+                  <p>Hi Team</p><br><br>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;Build Job No:${{github.run_number}} and Job Status:${{job.status}} and the Execution is completed successfully!</p><br><br>
+                  <a src="test-output/spark/Extent_Report.zip">Extent Report Zip Directory</a><br>
+                  <a src="test-output/spark/">Extent Report Directory</a><br>
+                  <p>Thanks</p><br>
+                  <p>Muthukumar</p>
+                  </body>
+                  </html>
+
           subject: ${{matrix.subject}}
           to: pssraja94@gmail.com
           from: pssraja94@gmail.com
