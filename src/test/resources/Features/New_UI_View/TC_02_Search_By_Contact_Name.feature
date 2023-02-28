@@ -1,27 +1,27 @@
 Feature: Validate Search By Contact Name
 
-#  @Test
+#  @Test1
 #  Scenario: To validate application scroll up
 #    When Click On Company Tab
 #    And Move the SalesIntel Website Screen Down
 #
-#  @Test
+#  @Test1
 #  Scenario: To validate application scroll down
 #    Then Move the SalesIntel Website Screen Up
 #
-#  @Test
+#  @Test1
 #  Scenario: To validate application Upload a file
 #    Then Click On Browse Button
 #    And Upload File From Local Directory
 
 
-  @Test
+  @Test1
   Scenario: To validate SalesIntel application Valid User Username and Valid Password
     And Enter Valid Username
     And Enter Valid Password
     And Click On Login Button
 
-  @Test
+  @Test1
   Scenario: To validate application Search Page Content is displayed
     Then Click on Contact Radio Button
     When Click on Search Button
@@ -34,11 +34,11 @@ Feature: Validate Search By Contact Name
     Then Verify First Name is displayed
     And Verify Last Name is displayed
 
-  @Test
+  @Test1
   Scenario: To validate application Search without Firstname and LastName
     When Click on Search Button
 
-  @Test
+  @Test1
   Scenario: To validate application Search by FirstName and LastName using Integer Value
     When Click on Contact Name Button
     And Enter the First Name with Integer Value
@@ -46,7 +46,7 @@ Feature: Validate Search By Contact Name
     And Click on Search Button
     Then Verify Error Message is displayed When search with FirstName and LastName only Integer
 
-  @Test
+  @Test1
   Scenario: To validate application Search by Valid FirstName and LastName
     When Clear the Text in First Name Field
     And Clear the Text in Last Name Field
@@ -58,7 +58,7 @@ Feature: Validate Search By Contact Name
     And Clear the Text in Last Name Field
 
 
-  @Test
+  @Test1
   Scenario: To validate application add multiple contact into New Contact List
     And Click On Clear Button
     And Click On Do Not Save Button
@@ -73,13 +73,13 @@ Feature: Validate Search By Contact Name
     When Enter New Contact List
     And Click On Create New Contact List Save Button
 
-  @Test
+  @Test1
   Scenario: To validate application Contact into the Contact List
     When Click On List Tab
     Then Select Preview Button
 #    And Compare Contact details into the List
 
-  @Test
+  @Test1
   Scenario: To validate application add multiple contact into Existing Contact List
     When Click On SalesIntel Tab
     And Click On Clear Button
@@ -95,13 +95,13 @@ Feature: Validate Search By Contact Name
     And Click on Contact List Drop Down Option
     And Click On Add Contact List Save Button
 
-  @Test
+  @Test1
   Scenario: To validate application Delete Contact List
     And Click On List Tab
     And Delete Contact List
     And Click On Delete Contact List
 
-  @Test
+  @Test1
   Scenario: To validate application Reveal Contact1 Search by Valid FirstName and LastName
     Then Click On SalesIntel Tab
 #    Then Click on Contact Name Button
@@ -115,7 +115,7 @@ Feature: Validate Search By Contact Name
     #And Click On Reveal Contact Search Button
     And Get the Total Reveal Count
 
-  @Test
+  @Test1
   Scenario: To validate application Reveal Contact2 Search by Valid FirstName and LastName
     When Clear the Text in First Name Field
     And Clear the Text in Last Name Field
@@ -127,7 +127,7 @@ Feature: Validate Search By Contact Name
     #And Click On Reveal Contact Search Button
     And Get the Total Reveal Count
 
-  @Test
+  @Test1
   Scenario: To validate application Reveal Contact3 Search by Valid FirstName and LastName
     When Clear the Text in First Name Field
     And Clear the Text in Last Name Field
@@ -139,7 +139,7 @@ Feature: Validate Search By Contact Name
     #And Click On Reveal Contact Search Button
     And Get the Total Reveal Count
 
-  @Test
+  @Test1
   Scenario: To validate application Reveal Contact4 Search by Valid FirstName and LastName
     When Clear the Text in First Name Field
     And Clear the Text in Last Name Field
@@ -151,7 +151,7 @@ Feature: Validate Search By Contact Name
     #And Click On Reveal Contact Search Button
     And Get the Total Reveal Count
 
-  @Test
+  @Test1
   Scenario: To validate application Reveal Contact5 Search by Valid FirstName and LastName
     When Clear the Text in First Name Field
     And Clear the Text in Last Name Field
@@ -163,7 +163,7 @@ Feature: Validate Search By Contact Name
     #And Click On Reveal Contact Search Button
     And Get the Total Reveal Count
 
-  @Test
+  @Test1
   Scenario: To validate application Logout
     When Click On Setting Options
     And Click On Logout Options

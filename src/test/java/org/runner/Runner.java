@@ -55,6 +55,8 @@ public class Runner extends AbstractTestNGCucumberTests {
 	public void cucumberReportGenerate() {
 		Global.generateJVMReport(
 				System.getProperty("user.dir") + "\\src\\test\\resources\\Reports\\Json\\cucumber.json");
+		
+		
 	}
 
 }

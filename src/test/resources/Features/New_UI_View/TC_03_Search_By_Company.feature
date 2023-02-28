@@ -1,19 +1,19 @@
 Feature: Validate Search By Company
 
-  @Test
+  @Test1
   Scenario: To validate SalesIntel application Valid User Username and Valid Password
     And Enter Valid Username
     And Enter Valid Password
     And Click On Login Button
 
-  @Test
+  @Test1
   Scenario: To validate application Search without Company Name
     Then Click on Company Radio Button
     When Click on Search Button
 #    When Click On Company Tab
 #    And Click on Company Search Button
 
-  @Test
+  @Test1
   Scenario: To validate application Search by Valid Company Name
     And Click On Clear Button
     And Click On Do Not Save Button
@@ -23,7 +23,7 @@ Feature: Validate Search By Company
     And Click on Search Button
     And Validate Company Search Result
 
-  @Test
+  @Test1
   Scenario: To validate application add multiple Company into New Company List
     And Click On Clear Button
     And Click On Do Not Save Button
@@ -44,7 +44,7 @@ Feature: Validate Search By Company
 #    Then Select Preview Button
 ##    And Compare Contact details into the List
 
-  @Test
+  @Test1
   Scenario: To validate application add multiple Company into Existing Company List
     Then Click On SalesIntel Tab
 #    When Click On List Tab
@@ -62,13 +62,13 @@ Feature: Validate Search By Company
     And Click on Company List Drop Down Option
     And Click On Add Company List Save Button
 
-  @Test
+  @Test1
   Scenario: To validate application Delete Company List
     And Click On List Tab
     And Delete Company List
     And Click On Delete Company List
 
-  @Test
+  @Test1
   Scenario: To validate application Logout
     When Click On Setting Options
     And Click On Logout Options
