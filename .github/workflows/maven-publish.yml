@@ -73,9 +73,7 @@ jobs:
           secure: true
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          matrix:
-              include:
-              - subject: | 
+          subject:  | 
                   <html>
                   <body>
                   <p>Sales Intel CI/CD Automation Result
@@ -91,7 +89,9 @@ jobs:
                    </script>
                   </body>
                   </html>
-              html_body: |
+          to: pssraja94@gmail.com
+          from: pssraja94@gmail.com
+          html_body: |
                   <html>
                   <body>
                   <p>Hi Team</p><br><br>
@@ -102,11 +102,6 @@ jobs:
                   <p>Muthukumar</p>
                   </body>
                   </html>
-
-          subject: ${{matrix.subject}}
-          to: pssraja94@gmail.com
-          from: pssraja94@gmail.com
-          body: ${{matrix.html_body}}
           ignore_cert: true
           convert_markdown: true
           content_type: application/zip
