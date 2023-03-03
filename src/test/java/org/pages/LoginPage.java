@@ -164,7 +164,6 @@ public class LoginPage extends Global {
 	@FindBy(xpath = "//span[contains(text(),'HR')]/../../../input")
 	private WebElement HrDepartmentFilter;
 
-
 	@FindBy(xpath = "(//span[contains(text(),'IT')])[1]")
 	private WebElement ITDepartmentFilter;
 
@@ -322,7 +321,7 @@ public class LoginPage extends Global {
 	private WebElement RevenueInSearchResult;
 
 	@FindBy(xpath = "(//div[contains(text(),'Company Size')]/..)/span")
-	private WebElement	EmpSizeInSearchResult;
+	private WebElement EmpSizeInSearchResult;
 
 	@FindBy(xpath = "//div[contains(text(),'Technographics')]")
 	private WebElement Technographics;
@@ -540,7 +539,6 @@ public class LoginPage extends Global {
 	@FindBy(xpath = "(//span[contains(text(),'Netflix')])[2]")
 	private WebElement NetflixTopicInResult;
 
-
 	@FindBy(xpath = "//input[@placeholder='Enter Industry Name']")
 	private WebElement IndustryNameInputBox;
 
@@ -560,7 +558,6 @@ public class LoginPage extends Global {
 
 	@FindBy(xpath = "(//strong[contains(text(),'NAME')])[1]/../../../../tbody/tr[1]/td[1]/div/span")
 	private WebElement FirstSavedSearchName;
-
 
 	@FindBy(xpath = "(//span[contains(text(),'')]/../../../td[2]/div[contains(text(),'Private')])[1]")
 	private WebElement VisibilityAsPrivateInSavedSearch;
@@ -618,12 +615,10 @@ public class LoginPage extends Global {
 	@FindBy(xpath = "(//span[contains(text(),'Job Level')]//following::input[@type='checkbox'])[6]")
 	private WebElement JobManagers;
 
-
 	@FindBy(xpath = "(//span[contains(text(),'Job Level')]//following::input[@type='checkbox'])[7]")
 	private WebElement JobKeyinfluence;
 
-	private String Contact_search_Name1 = ReadDatafromJson("Contact_Name","ContactSearch1");
-
+	private String Contact_search_Name1 = ReadDatafromJson("Contact_Name", "ContactSearch1");
 
 	@FindBy(xpath = "(//strong[@class='cursor-pointer'])[1]")
 	private WebElement SortbyName;
@@ -699,7 +694,6 @@ public class LoginPage extends Global {
 	@FindBy(xpath = "//*[@class='btn btn-primary' and contains(text(),'Save')]")
 	private WebElement createnamelistsavebutton;
 
-
 	@FindBy(xpath = "(//*[contains(text(),'Lists')])[1]")
 	private WebElement Listtab;
 
@@ -722,7 +716,7 @@ public class LoginPage extends Global {
 	private WebElement SaveSearchButton;
 
 	@FindBy(xpath = "//button[@type='button' and contains(text(),'Search Saved')]")
-	private  WebElement SearchSavedButton;
+	private WebElement SearchSavedButton;
 	@FindBy(xpath = "(//strong[contains(text(),'NAME')])[1]/../../../../tbody/tr[1]/td[4]/div/button[1]/i")
 	private WebElement EditButtonForFirstSavedSearch;
 
@@ -734,7 +728,6 @@ public class LoginPage extends Global {
 
 	@FindBy(xpath = "//label[contains(text(),'Receive Email Alerts')]/../div/ui-switch/button")
 	private WebElement RecieveEmailAllertButton;
-
 
 	@FindBy(xpath = "//label[contains(text(),' Visibility')]/../div/ng-select")
 	private WebElement VisibilityOptions;
@@ -756,7 +749,6 @@ public class LoginPage extends Global {
 
 	@FindBy(xpath = "(//span[contains(text(),'Private')])[1]")
 	private WebElement VisibilityPrivateForEdit;
-
 
 	@FindBy(xpath = "//label[contains(text(),'Default View')]/../div/ng-select/ng-dropdown-panel/div/div[2]/div[2]")
 	private WebElement DefaultViewCompany;
@@ -837,11 +829,12 @@ public class LoginPage extends Global {
 	@FindBy(xpath = "(//*[contains(text(),'Human Verified')])[1]")
 	private WebElement Humanverified;
 
+	@FindBy(xpath = "//*[contains(text(),'Welcome, Universal ')]")
+	private WebElement Welcome_Universal_Label;
+
 	public WebElement getEmailInputBoxInResearch() {
 		return EmailInputBoxInResearch;
 	}
-
-
 
 	public LoginPage() throws Throwable {
 		PageFactory.initElements(driver, this);
@@ -851,7 +844,6 @@ public class LoginPage extends Global {
 		return userName;
 	}
 
-
 	public WebElement getPassword() {
 		return password;
 	}
@@ -859,24 +851,31 @@ public class LoginPage extends Global {
 	public WebElement getLoginCTA() {
 		return loginCTA;
 	}
+
 	public WebElement getContactName() {
 		return ContactName;
 	}
+
 	public WebElement getFirstName() {
 		return FirstName;
 	}
+
 	public WebElement getLastName() {
 		return LastName;
 	}
+
 	public WebElement getContactEmail() {
 		return contactemail;
 	}
+
 	public WebElement getSearchButton() {
 		return SearchButton;
 	}
+
 	public WebElement getSearchButtonForResearch() {
 		return SearchButtonForResearch;
 	}
+
 	public WebElement getSearchedContactInResearch() {
 		return SearchedContactInResearch;
 	}
@@ -920,30 +919,39 @@ public class LoginPage extends Global {
 	public WebElement getForgotPassword() {
 		return ForgotPassword;
 	}
+
 	public WebElement getInvalidUsernameResult() {
 		return InvalidUsernameResult;
 	}
+
 	public WebElement getInvalidUsernamepasswordResult() {
 		return InvalidUsernamepasswordResult;
 	}
+
 	public WebElement getInvalidpasswordUsernameResult() {
 		return InvalidpasswordUsernameResult;
 	}
+
 	public WebElement getContactsection() {
 		return Contactsection;
 	}
+
 	public WebElement getContactSearchwithInteger() {
 		return ContactSearchwithInteger;
 	}
+
 	public WebElement getForgetPasswordEmail() {
 		return ForgetPasswordEmail;
 	}
+
 	public WebElement getResetPasswordButton() {
 		return ResetPasswordButton;
 	}
+
 	public WebElement getContactEmailInputbox() {
 		return ContactEmailInputbox;
 	}
+
 	public WebElement getContactJobLevel() {
 		return ContactJobLevel;
 	}
@@ -955,6 +963,7 @@ public class LoginPage extends Global {
 	public WebElement getBoardMemberJobLevelInResult() {
 		return BoardMemberJobLevelInResult;
 	}
+
 	public WebElement getClevelExecutiveJobLevelInResult() {
 		return ClevelExecutiveJobLevelInResult;
 	}
@@ -962,6 +971,7 @@ public class LoginPage extends Global {
 	public WebElement getVicePresidentJobLevelInResult() {
 		return VicePresidentJobLevelInResult;
 	}
+
 	public WebElement getDirectorsJobLevelInResult() {
 		return DirectorsJobLevelInResult;
 	}
@@ -969,6 +979,7 @@ public class LoginPage extends Global {
 	public WebElement getManagersJobLevelInResult() {
 		return ManagersJobLevelInResult;
 	}
+
 	public WebElement getKeyInfluencersJobLevelInResult() {
 		return KeyInfluencersJobLevelInResult;
 	}
@@ -976,324 +987,332 @@ public class LoginPage extends Global {
 	public WebElement getRolesection() {
 		return Rolesection;
 	}
-	public WebElement getDepartmentFilter(){
+
+	public WebElement getDepartmentFilter() {
 		return DepartmentFilter;
 	}
-	public WebElement getFinanceDepartmentFilter(){
+
+	public WebElement getFinanceDepartmentFilter() {
 		return FinanceDepartmentFilter;
 	}
 
-	public WebElement getHrDepartmentFilter(){
+	public WebElement getHrDepartmentFilter() {
 		return HrDepartmentFilter;
 	}
 
-	public WebElement getITDepartmentFilter(){
+	public WebElement getITDepartmentFilter() {
 		return ITDepartmentFilter;
 	}
 
-	public WebElement getLegalDepartmentFilter(){
+	public WebElement getLegalDepartmentFilter() {
 		return LegalDepartmentFilter;
 	}
 
-	public WebElement getMarketingDepartmentFilter(){
+	public WebElement getMarketingDepartmentFilter() {
 		return MarketingDepartmentFilter;
 	}
-	public WebElement getMarketingDepartmentInResult(){
+
+	public WebElement getMarketingDepartmentInResult() {
 		return MarketingDepartmentInResult;
 	}
-	public WebElement getLegalDepartmentInResult(){
+
+	public WebElement getLegalDepartmentInResult() {
 		return LegalDepartmentInResult;
 	}
-	public WebElement getITDepartmentInResult(){
+
+	public WebElement getITDepartmentInResult() {
 		return ITDepartmentInResult;
 	}
 
-	public WebElement getHrDepartmentInResult(){
+	public WebElement getHrDepartmentInResult() {
 		return HrDepartmentInResult;
 	}
 
-	public WebElement getFinanceDepartmentInResult(){
+	public WebElement getFinanceDepartmentInResult() {
 		return FinanceDepartmentInResult;
 	}
 
-	public WebElement getOperationsDepartmentFilter(){
+	public WebElement getOperationsDepartmentFilter() {
 		return OperationsDepartmentFilter;
 	}
 
-	public WebElement getOperationsDepartmentInResult(){
+	public WebElement getOperationsDepartmentInResult() {
 		return OperationsDepartmentInResult;
 	}
 
-	public WebElement getProcurementDepartmentFilter(){
+	public WebElement getProcurementDepartmentFilter() {
 		return ProcurementDepartmentFilter;
 	}
 
-	public WebElement getProcurementDepartmentInResult(){
+	public WebElement getProcurementDepartmentInResult() {
 		return ProcurementDepartmentInResult;
 	}
 
-	public WebElement getRndDepartmentFilter(){
+	public WebElement getRndDepartmentFilter() {
 		return RndDepartmentFilter;
 	}
 
-	public WebElement getRndDepartmentInResult(){
+	public WebElement getRndDepartmentInResult() {
 		return RndDepartmentInResult;
 	}
 
-	public WebElement getSalesDepartmentFilter(){
+	public WebElement getSalesDepartmentFilter() {
 		return SalesDepartmentFilter;
 	}
 
-	public WebElement getSalesDepartmentIn_Result(){
+	public WebElement getSalesDepartmentIn_Result() {
 		return SalesDepartmentIn_Result;
 	}
 
-	public WebElement getCrossFunctionalDepartmentFilter(){
+	public WebElement getCrossFunctionalDepartmentFilter() {
 		return CrossFunctionalDepartmentFilter;
 	}
-	public WebElement getCrossFunctionalDepartmentInResult(){
+
+	public WebElement getCrossFunctionalDepartmentInResult() {
 		return CrossFunctionalDepartmentInResult;
 	}
 
 	public WebElement getJobBoardMember() {
 		return JobBoardMember;
 	}
+
 	public WebElement getJobclevelexecutiveFilter() {
 		return JobclevelexecutiveFilter;
 	}
 
-	public WebElement getVicePrecidentsJobLevelFilter(){
+	public WebElement getVicePrecidentsJobLevelFilter() {
 		return VicePrecidentsJobLevelFilter;
 	}
 
-	public WebElement getDirectorsJobLevelFilter(){
+	public WebElement getDirectorsJobLevelFilter() {
 		return DirectorsJobLevelFilter;
 	}
 
-	public WebElement getManagersJobLevelFilter(){
+	public WebElement getManagersJobLevelFilter() {
 		return ManagersJobLevelFilter;
 	}
 
-	public WebElement getKeyInfluencersJobLevelFilter(){
+	public WebElement getKeyInfluencersJobLevelFilter() {
 		return KeyInfluencersJobLevelFilter;
 	}
-	public WebElement getTitleFilter(){
+
+	public WebElement getTitleFilter() {
 		return TitleFilter;
 	}
 
-	public WebElement getTitleTextField(){
+	public WebElement getTitleTextField() {
 		return TitleTextField;
 	}
 
-	public WebElement getLocationFilter(){
+	public WebElement getLocationFilter() {
 		return LocationFilter;
 	}
 
-	public WebElement getStateField(){
+	public WebElement getStateField() {
 		return StateField;
 	}
 
-	public WebElement getCaliforniaState(){
+	public WebElement getCaliforniaState() {
 		return CaliforniaState;
 	}
 
-	public WebElement getCaliforniaInResult(){
+	public WebElement getCaliforniaInResult() {
 		return CaliforniaInResult;
 	}
 
-	public WebElement getZipCodePage(){
+	public WebElement getZipCodePage() {
 		return ZipCodePage;
 	}
-	public WebElement getStatePage(){
+
+	public WebElement getStatePage() {
 		return StatePage;
 	}
 
-	public WebElement getZipCodeTextField(){
+	public WebElement getZipCodeTextField() {
 		return ZipCodeTextField;
 	}
 
-	public WebElement getMilesSelectBox(){
+	public WebElement getMilesSelectBox() {
 		return MilesSelectBox;
 	}
 
-
-	public WebElement getMetroAreaPage(){
+	public WebElement getMetroAreaPage() {
 		return MetroAreaPage;
 	}
 
-	public WebElement getMetroAreaTextField(){
+	public WebElement getMetroAreaTextField() {
 		return MetroAreaTextField;
 	}
-	public WebElement getMetroAreatInSearchResult(){
+
+	public WebElement getMetroAreatInSearchResult() {
 		return MetroAreatInSearchResult;
 	}
 
-	public WebElement getNonUsaRadioButton(){
+	public WebElement getNonUsaRadioButton() {
 		return NonUsaRadioButton;
 	}
 
-	public WebElement getGlobalRadioButton(){
+	public WebElement getGlobalRadioButton() {
 		return GlobalRadioButton;
 	}
-	public WebElement getCountryBox(){
+
+	public WebElement getCountryBox() {
 		return CountryBox;
 	}
 
-	public WebElement getKeywordsFilter(){
+	public WebElement getKeywordsFilter() {
 		return KeywordsFilter;
 	}
 
-	public WebElement getIndustryFilter(){
+	public WebElement getIndustryFilter() {
 		return IndustryFilter;
 	}
-	public WebElement getNAICSorSICpage(){
+
+	public WebElement getNAICSorSICpage() {
 		return NAICSorSICpage;
 	}
 
-	public WebElement getSICcodeRadioButton(){
+	public WebElement getSICcodeRadioButton() {
 		return SICcodeRadioButton;
 	}
 
-	public WebElement getRevenueFilter(){
+	public WebElement getRevenueFilter() {
 		return RevenueFilter;
 	}
 
-	public WebElement getEmployeeSizeFilter(){
+	public WebElement getEmployeeSizeFilter() {
 		return EmployeeSizeFilter;
 	}
 
-	public WebElement getMinRevenueInputBox(){
+	public WebElement getMinRevenueInputBox() {
 		return MinRevenueInputBox;
 	}
 
-	public WebElement getMinEmpSizeInputBox(){
+	public WebElement getMinEmpSizeInputBox() {
 		return MinEmpSizeInputBox;
 	}
 
-	public WebElement getMaxRevenueInputBox(){
+	public WebElement getMaxRevenueInputBox() {
 		return MaxRevenueInputBox;
 	}
 
-	public WebElement getMaxEmpSizeInputBox(){
+	public WebElement getMaxEmpSizeInputBox() {
 		return MaxEmpSizeInputBox;
 	}
 
-
-
-	public WebElement getRevenueInSearchResult(){
+	public WebElement getRevenueInSearchResult() {
 		return RevenueInSearchResult;
 	}
 
-	public WebElement getEmpSizeInSearchResult(){
+	public WebElement getEmpSizeInSearchResult() {
 		return EmpSizeInSearchResult;
 	}
 
-	public WebElement getTechnographics(){
+	public WebElement getTechnographics() {
 		return Technographics;
 	}
 
-	public WebElement getProductFilter(){
+	public WebElement getProductFilter() {
 		return ProductFilter;
 	}
 
-	public WebElement getProviderFilter(){
+	public WebElement getProviderFilter() {
 		return ProviderFilter;
 	}
 
-	public WebElement getSelectAllCheckBoxForCategories(){
+	public WebElement getSelectAllCheckBoxForCategories() {
 		return SelectAllCheckBoxForCategories;
 	}
 
-	public WebElement getCategoriesFilter(){
+	public WebElement getCategoriesFilter() {
 		return CategoriesFilter;
 	}
 
-	public WebElement getProductTextBox(){
+	public WebElement getProductTextBox() {
 		return ProductTestBox;
 	}
-	public WebElement getProviderTextBox(){
+
+	public WebElement getProviderTextBox() {
 		return ProviderTextBox;
 	}
 
-	public WebElement getCategoryTextBox(){
+	public WebElement getCategoryTextBox() {
 		return CategoryTextBox;
 	}
 
-	public WebElement getCompanyNameInResult(){
+	public WebElement getCompanyNameInResult() {
 		return CompanyNameInResult;
 	}
 
-	public WebElement getProductInResult(){
+	public WebElement getProductInResult() {
 		return ProductInResult;
 	}
 
-	public WebElement getProviderInResult(){
+	public WebElement getProviderInResult() {
 		return ProviderInResult;
 	}
 
-	public WebElement getCategoryInResult(){
+	public WebElement getCategoryInResult() {
 		return CategoryInResult;
 	}
 
-	public WebElement getNoTechnographyIsMatching(){
+	public WebElement getNoTechnographyIsMatching() {
 		return NoTechnographyIsMatching;
 	}
 
-	public WebElement getALLButtonInProduct(){
+	public WebElement getALLButtonInProduct() {
 		return ALLButtonInProduct;
 	}
 
-	public WebElement getALLButtonInProvider(){
+	public WebElement getALLButtonInProvider() {
 		return ALLButtonInProvider;
 	}
 
-	public WebElement getALLButtonInCategory(){
+	public WebElement getALLButtonInCategory() {
 		return ALLButtonInCategory;
 	}
 
-	public WebElement getNoneButtonInProduct(){
+	public WebElement getNoneButtonInProduct() {
 		return NoneButtonInProduct;
 	}
 
-	public WebElement getNoneButtonInProvider(){
+	public WebElement getNoneButtonInProvider() {
 		return NoneButtonInProvider;
 	}
 
-	public WebElement getNoneButtonInCategory(){
+	public WebElement getNoneButtonInCategory() {
 		return NoneButtonInCategory;
 	}
 
-	public WebElement getBackToSearchResults(){
+	public WebElement getBackToSearchResults() {
 		return BackToSearchResults;
 	}
 
-	public WebElement getAllButton(){
+	public WebElement getAllButton() {
 		return AllButton;
 	}
 
-	public WebElement getSearchInputBox(){
+	public WebElement getSearchInputBox() {
 		return SearchInputBox;
 	}
 
-	public WebElement getSalesIntelLogo(){
+	public WebElement getSalesIntelLogo() {
 		return SalesIntelLogo;
 	}
 
-	public WebElement getINTENT(){
+	public WebElement getINTENT() {
 		return INTENT;
 	}
 
-	public WebElement getScoreThresHoldFilter(){
+	public WebElement getScoreThresHoldFilter() {
 		return ScoreThresHoldFilter;
 	}
 
-	public WebElement getTopicThresHoldFilter(){
+	public WebElement getTopicThresHoldFilter() {
 		return TopicThresHoldFilter;
 	}
 
-
-
-	public WebElement getTopicThresholdInResult(){
+	public WebElement getTopicThresholdInResult() {
 		return TopicThresholdInResult;
 	}
 
@@ -1305,21 +1324,21 @@ public class LoginPage extends Global {
 		return TopicThresholdMover;
 	}
 
-	public WebElement getTopicFilter(){
+	public WebElement getTopicFilter() {
 		return TopicFilter;
 	}
 
-	public WebElement getNetflixTopic(){
+	public WebElement getNetflixTopic() {
 		return NetflixTopic;
 	}
 
-	public WebElement getHuluTopic(){
+	public WebElement getHuluTopic() {
 		return HuluTopic;
 	}
-	public WebElement getNetflixTopicInResult(){
+
+	public WebElement getNetflixTopicInResult() {
 		return NetflixTopicInResult;
 	}
-
 
 //	@Override
 //	public String toString() {
@@ -1328,100 +1347,102 @@ public class LoginPage extends Global {
 //				'}';
 //	}
 
-
-	public WebElement getIndustryNameInputBox(){
+	public WebElement getIndustryNameInputBox() {
 		return IndustryNameInputBox;
 	}
 
-	public WebElement getSearchByNameInput(){
+	public WebElement getSearchByNameInput() {
 		return SearchByNameInput;
 	}
-	public WebElement getNoRecordForSavedSearch(){
+
+	public WebElement getNoRecordForSavedSearch() {
 		return NoRecordForSavedSearch;
 	}
 
-	public WebElement getIncludeTeamCheckBox(){
+	public WebElement getIncludeTeamCheckBox() {
 		return IncludeTeamCheckBox;
 	}
 
-	public WebElement getFirstSearchedContact(){
+	public WebElement getFirstSearchedContact() {
 		return FirstSearchedContact;
 	}
-	public WebElement getFirstSearchedContactName(){
+
+	public WebElement getFirstSearchedContactName() {
 		return FirstSearchedContactName;
 	}
 
-	public WebElement getFirstSearchedContactLocation(){
+	public WebElement getFirstSearchedContactLocation() {
 		return FirstSearchedContactLocation;
 	}
 
-	public WebElement getFirstSavedSearchName(){
+	public WebElement getFirstSavedSearchName() {
 		return FirstSavedSearchName;
 	}
 
-
-	public WebElement getVisibilityAsPrivateInSavedSearch(){
+	public WebElement getVisibilityAsPrivateInSavedSearch() {
 		return VisibilityAsPrivateInSavedSearch;
 	}
-	public WebElement getVisibilityAsTeamInSavedSearch(){
+
+	public WebElement getVisibilityAsTeamInSavedSearch() {
 		return VisibilityAsTeamInSavedSearch;
 	}
 
-
-	public WebElement getPersonalEmailInResult(){
+	public WebElement getPersonalEmailInResult() {
 		return PersonalEmailInResult;
 	}
 
-	public WebElement getWorkEmailInResult(){
+	public WebElement getWorkEmailInResult() {
 		return WorkEmailInResult;
 	}
 
-	public WebElement getLinkedInUrlInResult(){
+	public WebElement getLinkedInUrlInResult() {
 		return LinkedInUrlInResult;
 	}
 
-	public WebElement getTitleInSearchResult(){
+	public WebElement getTitleInSearchResult() {
 		return TitleInSearchResult;
 	}
 
-	public WebElement getLastUpdatedDateFromRes(){
+	public WebElement getLastUpdatedDateFromRes() {
 		return LastUpdatedDateFromRes;
 	}
 
-	public WebElement getMobilePhoneInResult(){
+	public WebElement getMobilePhoneInResult() {
 		return MobilePhoneInResult;
 	}
-	public WebElement getDirectPhoneInResult(){
+
+	public WebElement getDirectPhoneInResult() {
 		return DirectPhoneInResult;
 	}
-	public WebElement getSelectAllCheckBox(){
+
+	public WebElement getSelectAllCheckBox() {
 		return SelectAllCheckBox;
 	}
 
-	public WebElement getKeywordsInputBox(){
+	public WebElement getKeywordsInputBox() {
 		return KeywordsInputBox;
 	}
 
-
-	public WebElement getAlbanyORMetroArea(){
+	public WebElement getAlbanyORMetroArea() {
 		return AlbanyORMetroArea;
 	}
 
-	public WebElement getTitleInResult(){
+	public WebElement getTitleInResult() {
 		return TitleInResult;
 	}
 
-	public WebElement getSearchedContact(){
+	public WebElement getSearchedContact() {
 		return SearchedContact;
 	}
-	public WebElement getEmailInResult(){
+
+	public WebElement getEmailInResult() {
 		return EmailInResult;
 	}
-
 
 	public WebElement getJobVicepresident() {
 		return JobVicepresident;
 	}
+
 	public WebElement getJobDirectors() {
 		return JobDirectors;
 	}
@@ -1429,6 +1450,7 @@ public class LoginPage extends Global {
 	public WebElement getNameColumn() {
 		return NameColumn;
 	}
+
 	public WebElement getJobManagers() {
 		return JobManagers;
 	}
@@ -1504,6 +1526,7 @@ public class LoginPage extends Global {
 	public WebElement getAnyPhoneCheckBox() {
 		return AnyPhoneCheckBox;
 	}
+
 	public WebElement getAnyDirectPhoneCheckBox() {
 		return AnyDirectPhoneCheckBox;
 	}
@@ -1531,6 +1554,7 @@ public class LoginPage extends Global {
 	public WebElement getContactListForDataEnrichment() {
 		return ContactListForDataEnrichment;
 	}
+
 	public WebElement getNextButton() {
 		return NextButton;
 	}
@@ -1566,9 +1590,11 @@ public class LoginPage extends Global {
 	public WebElement getOneRODList() {
 		return OneRODList;
 	}
+
 	public WebElement getRODList() {
 		return RODList;
 	}
+
 	public WebElement getOneCompanyList() {
 		return OneCompanyList;
 	}
@@ -1576,6 +1602,7 @@ public class LoginPage extends Global {
 	public WebElement getOneContactList() {
 		return OneContactList;
 	}
+
 	public WebElement getOneSuppressionList() {
 		return OneSuppressionList;
 	}
@@ -1588,33 +1615,39 @@ public class LoginPage extends Global {
 		return FirstCompanyLinkInResult;
 	}
 
-
 	public WebElement getJobLevelSelectAll() {
 		return JobLevelSelectAll;
 	}
+
 	public WebElement getContactSearch1() {
 		return ContactSearch1;
 	}
+
 	public WebElement getContactSearch2() {
 		return ContactSearch2;
 	}
+
 	public WebElement getContactSearch3() {
 		return ContactSearch3;
 	}
+
 	public WebElement getContactSearch4() {
 		return ContactSearch4;
 	}
+
 	public WebElement getContactSearch5() {
 		return ContactSearch5;
 	}
+
 	public WebElement getContactSearchReveal() {
 		return ContactSearchReveal;
 	}
 
-	public WebElement getNoneOfPage(){
+	public WebElement getNoneOfPage() {
 		return NoneOfPage;
 	}
-	public WebElement getNAICScodeInputBox(){
+
+	public WebElement getNAICScodeInputBox() {
 		return NAICScodeInputBox;
 	}
 
@@ -1625,36 +1658,47 @@ public class LoginPage extends Global {
 	public WebElement getTotalCredits() {
 		return TotalCredits;
 	}
+
 	public WebElement getDonotsavebutton() {
 		return Donotsavebutton;
 	}
+
 	public WebElement getFastgrowingContact() {
 		return FastgrowingContact;
 	}
+
 	public WebElement getAddalltolistbutton() {
 		return Addalltolistbutton;
 	}
+
 	public WebElement getCreatenewcontactlist() {
 		return Createnewcontactlist;
 	}
+
 	public WebElement getEntercreatenamelist() {
 		return Entercreatenamelist;
 	}
+
 	public WebElement getcreatenamelistsavebutton() {
 		return createnamelistsavebutton;
 	}
+
 	public WebElement getListtab() {
 		return Listtab;
 	}
+
 	public WebElement getDeletecontactList() {
 		return DeletecontactList;
 	}
+
 	public WebElement getContactsTab() {
 		return ContactsTab;
 	}
+
 	public WebElement getCompanyTab() {
 		return CompanyTab;
 	}
+
 	public WebElement getAddtoexistinglist() {
 		return Addtoexistinglist;
 	}
@@ -1662,9 +1706,11 @@ public class LoginPage extends Global {
 	public WebElement getContactListDropdown() {
 		return ContactListDropdown;
 	}
+
 	public WebElement getCompanyName() {
 		return CompanyName;
 	}
+
 	public WebElement getCompanyInput() {
 		return CompanyInput;
 	}
@@ -1672,24 +1718,31 @@ public class LoginPage extends Global {
 	public WebElement getCreatenewcompanylist() {
 		return Createnewcompanylist;
 	}
+
 	public WebElement getAddtoexistingcompanylist() {
 		return Addtoexistingcompanylist;
 	}
+
 	public WebElement getSortbyName() {
 		return SortbyName;
 	}
+
 	public WebElement getSortbyJobTitle() {
 		return SortbyJobTitle;
 	}
+
 	public WebElement getSortbyLevel() {
 		return SortbyLevel;
 	}
+
 	public WebElement getSortbyDept() {
 		return SortbyDept;
 	}
+
 	public WebElement getSortbyComp() {
 		return SortbyComp;
 	}
+
 	public WebElement getSortbyLocation() {
 		return SortbyLocation;
 	}
@@ -1701,12 +1754,15 @@ public class LoginPage extends Global {
 	public WebElement getScrollup() {
 		return Scrollup;
 	}
+
 	public WebElement getBrowsefile() {
 		return Browsefile;
 	}
+
 	public WebElement getWelcomeTextforLogout() {
 		return WelcomeTextforLogout;
 	}
+
 	public WebElement getLogout() {
 		return Logout;
 	}
@@ -1714,24 +1770,31 @@ public class LoginPage extends Global {
 	public WebElement getUpdateButtonForSaveSearch() {
 		return UpdateButtonForSaveSearch;
 	}
+
 	public WebElement getnewContactradiobutton() {
 		return newContactradiobutton;
 	}
+
 	public WebElement getnewCompanyradiobutton() {
 		return newCompanyradiobutton;
 	}
+
 	public WebElement getSalesIntelTab() {
 		return SalesIntelTab;
 	}
+
 	public WebElement getSearchBoxInSalesIntalTab() {
 		return SearchBoxInSalesIntalTab;
 	}
+
 	public WebElement getRecommendedList() {
 		return RecommendedList;
 	}
+
 	public WebElement getSavedSearchesInSiTab() {
 		return SavedSearchesInSiTab;
 	}
+
 	public WebElement getFirstSavedSearchInSiTab() {
 		return FirstSavedSearchInSiTab;
 	}
@@ -1739,9 +1802,11 @@ public class LoginPage extends Global {
 	public WebElement getSaveSearchButton() {
 		return SaveSearchButton;
 	}
+
 	public WebElement getSearchSavedButton() {
 		return SearchSavedButton;
 	}
+
 	public WebElement getEditButtonForFirstSavedSearch() {
 		return EditButtonForFirstSavedSearch;
 	}
@@ -1749,6 +1814,7 @@ public class LoginPage extends Global {
 	public WebElement getSaveSearchNameTextBox() {
 		return SaveSearchNameTextBox;
 	}
+
 	public WebElement getSavedSearchEditPopupTitle() {
 		return SavedSearchEditPopupTitle;
 	}
@@ -1757,10 +1823,10 @@ public class LoginPage extends Global {
 		return RecieveEmailAllertButton;
 	}
 
-
 	public WebElement getVisibilityOptions() {
 		return VisibilityOptions;
 	}
+
 	public WebElement getDefaultViewDropdown() {
 		return DefaultViewDropdown;
 	}
@@ -1776,6 +1842,7 @@ public class LoginPage extends Global {
 	public WebElement getVisibilityToTeamWithClass() {
 		return VisibilityToTeamWithClass;
 	}
+
 	public WebElement getVisibilityPrivate() {
 		return VisibilityPrivate;
 	}
@@ -1795,9 +1862,11 @@ public class LoginPage extends Global {
 	public WebElement getSaveButton() {
 		return SaveButton;
 	}
+
 	public WebElement getSaveButtonForSavedSearch() {
 		return SaveButtonForSavedSearch;
 	}
+
 	public WebElement getDeleteButton() {
 		return DeleteButton;
 	}
@@ -1813,12 +1882,15 @@ public class LoginPage extends Global {
 	public WebElement getFirstRecommendedList() {
 		return FirstRecommendedList;
 	}
+
 	public WebElement getViewallForSavedSearch() {
 		return ViewallForSavedSearch;
 	}
+
 	public WebElement getIncludeTeamSearchesTextInSavedSearchTab() {
 		return IncludeTeamSearchesTextInSavedSearchTab;
 	}
+
 	public WebElement getFirstRecommendedListInRankings() {
 		return FirstRecommendedListInRankings;
 	}
@@ -1826,9 +1898,11 @@ public class LoginPage extends Global {
 	public WebElement getSearchButtonInSalesIntelTab() {
 		return SearchButtonInSalesIntelTab;
 	}
-	public WebElement getCompaniesTab(){
+
+	public WebElement getCompaniesTab() {
 		return CompaniesTab;
 	}
+
 	public WebElement getNoContactFound() {
 		return NoContactFound;
 	}
@@ -1849,12 +1923,14 @@ public class LoginPage extends Global {
 		return RequestVerificationButton;
 	}
 
-	public WebElement RODreqestedInRODtab(){
+	public WebElement RODreqestedInRODtab() {
 		return RODreqestedInRODtab;
 	}
+
 	public WebElement getRoDTab() {
 		return RoDTab;
 	}
+
 	public WebElement getnewuniversalContactradiobutton() {
 		return newuniversalContactradiobutton;
 	}
@@ -1863,18 +1939,80 @@ public class LoginPage extends Global {
 		return Statevalueselection;
 	}
 
-	public WebElement getHumanVerifiedCompaniesCount(){
+	public WebElement getHumanVerifiedCompaniesCount() {
 		return HumanVerifiedCompaniesCount;
 	}
 
-	public WebElement getHumanVerifiedContactsCount(){
+	public WebElement getHumanVerifiedContactsCount() {
 		return HumanVerifiedContactsCount;
 	}
-
 
 	public WebElement LocationTab() {
 		return LocationTab;
 	}
 
+	public WebElement getRequestVerificationButton() {
+		return RequestVerificationButton;
+	}
+
+	public WebElement getRODreqestedInRODtab() {
+		return RODreqestedInRODtab;
+	}
+
+	public WebElement getContactemail() {
+		return contactemail;
+	}
+
+	public WebElement getNewContactradiobutton() {
+		return newContactradiobutton;
+	}
+
+	public WebElement getNewuniversalContactradiobutton() {
+		return newuniversalContactradiobutton;
+	}
+
+	public WebElement getNewCompanyradiobutton() {
+		return newCompanyradiobutton;
+	}
+
+	public WebElement getProductTestBox() {
+		return ProductTestBox;
+	}
+
+	public WebElement getScoreThresholdMover() {
+		return ScoreThresholdMover;
+	}
+
+	public WebElement getTopicThresholdMover() {
+		return TopicThresholdMover;
+	}
+
+	public WebElement getJobKeyinfluence() {
+		return JobKeyinfluence;
+	}
+
+	public String getContact_search_Name1() {
+		return Contact_search_Name1;
+	}
+
+	public WebElement getCreatenamelistsavebutton() {
+		return createnamelistsavebutton;
+	}
+
+	public WebElement getLocationTab() {
+		return LocationTab;
+	}
+
+	public WebElement getStatevalueselection() {
+		return Statevalueselection;
+	}
+
+	public WebElement getHumanverified() {
+		return Humanverified;
+	}
+
+	public WebElement getWelcome_Universal_Label() {
+		return Welcome_Universal_Label;
+	}
 
 }

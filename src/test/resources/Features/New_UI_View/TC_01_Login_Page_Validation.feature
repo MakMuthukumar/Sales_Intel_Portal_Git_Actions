@@ -13,6 +13,10 @@ Feature: Validate application login Page
   And Validate Forgot Password Link is displayed
   And Validate FAQ Link is displayed
   And Validate Login Button is displayed
+  
+  @Test
+  Scenario: To validate SalesIntel Application With Different Login Details
+		Then Validate The Login Details With Different Combination
 
   @Test
   Scenario: To validate SalesIntel application Tapping only Login Button
